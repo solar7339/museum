@@ -1,0 +1,423 @@
+@charset "UTF-8";
+
+@import url(reset.css);
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+
+/* 회원 타입 선택 */
+.sec_member_type.inner {
+  max-width: var(--member-width);
+  margin-top: 100px;
+}
+
+.sec_member_type > div {
+  border: 1px solid var(--gray-bright);
+  width: calc((100% - 32px) / 2);
+  float: left;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.sec_member_type > div > h3 {
+  padding-top: 10px;
+  padding-bottom: 100px;
+}
+
+.sec_member_type > div > a {
+  display: inline-block;
+  width: 165px;
+  height: 60px;
+  line-height: 60px;
+  color: var(--white);
+  background: var(--main-blue);
+}
+
+.kid_member {
+  margin-right: 32px;
+  background: url(../img/member/kid.png) no-repeat right bottom;
+}
+
+.adult_member {
+  background: url(../img/member/adult.png) no-repeat right bottom;
+}
+
+/* 회원가입 */
+.sec_signup .title_area {
+  display: block;
+  width: 100%;
+  height: 173px;
+  padding-top: 85px;
+  border-bottom: 1px solid var(--gray-bright);
+}
+
+.sec_signup .inner {
+  width: var(--member-width);
+  margin: 0 auto;
+}
+
+.sec_signup .title_area h3 {
+  display: inline-block;
+  font-size: 35px;
+  font-weight: bold;
+  color: var(--main-black);
+}
+
+.sec_signup .title_area span {
+  font-size: 16px;
+  font-weight: normal;
+  padding-left: 25px;
+}
+
+/* - 회원정보 입력 */
+.input_form {
+  font-weight: 500;
+  color: var(--main-black);
+}
+
+.input_form.inner {
+  padding-top: 60px;
+  padding-bottom: 29px;
+}
+
+.input_form dl {
+  padding-bottom: 20px;
+}
+
+.input_form dl::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.input_form dl > * {
+  float: left;
+}
+
+.input_form dl > dt {
+  width: 106px;
+  height: 43px;
+  line-height: 43px;
+  margin-right: 30px;
+}
+
+.solid_btn {
+  display: inline-block;
+  border: 1px solid var(--gray-medium);
+  font-size: 14px;
+  padding: 12px 18px 15px 20px;
+  margin-left: 6px;
+}
+
+.input_desc {
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--gray-dark);
+  padding-top: 5px;
+}
+
+/* - 약관 및 개인정보처리방침 */
+.terms_form.inner {
+  padding: 60px 0;
+}
+
+.terms_form > div {
+  padding-bottom: 20px;
+}
+
+.terms_form #chk_all + label {
+  font-size: 18px;
+}
+
+.terms_form .detail_chkbox {
+  display: inline-block;
+  width: calc(100% - 106px);
+}
+
+.terms_form .view_detail {
+  padding-right: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.terms_form .view_detail::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 7px;
+  background: url(../img/arrow_drop_gray.png) no-repeat;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  /* transition: all 0.5s; */
+}
+
+.terms_form .view_detail.on::after {
+  transform: rotate(180deg);
+}
+
+.terms_form .detail_contents {
+  margin-top: 10px;
+  padding: 20px 12px 20px 20px;
+  background: var(--gray-white);
+}
+
+.terms_form .detail_contents {
+  display: none;
+}
+
+.terms_form .detail_contents.active {
+  display: block;
+}
+
+.terms_form .detail_contents .detail_inner {
+  padding-right: 20px;
+  overflow: auto;
+  max-height: 168px;
+}
+
+.terms_form .detail_contents .detail_inner::-webkit-scrollbar {
+  width: 3px;
+}
+
+.terms_form .detail_contents .detail_inner::-webkit-scrollbar-thumb {
+  background-color: var(--gray-medium);
+}
+
+.detail_inner h4 {
+  margin-bottom: 20px;
+}
+
+.detail_inner h5 {
+  margin-bottom: 10px;
+}
+
+.detail_inner p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.terms_form .guardian_agree {
+  display: none;
+}
+
+/* - 마케팅 정보 동의 */
+.terms_form .marketing {
+  padding-bottom: 0;
+}
+
+.terms_form .marketing > p {
+  color: var(--main-black);
+  font-weight: 500;
+}
+
+.terms_form .marketing label {
+  font-weight: normal;
+}
+
+.terms_form .marketing .sms_notice {
+  padding: 13px 0 20px 0;
+}
+
+.terms_form .marketing .mailing_sub > li {
+  border: 1px solid var(--gray-bright);
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.terms_form .marketing .mailing_sub > li > .subject {
+  color: var(--main-black);
+  padding-bottom: 20px;
+}
+
+.museum_news_list > li,
+.newsletter_list > li {
+  display: inline-block;
+  padding-right: 15px;
+}
+
+.sec_signup .btn_area {
+  border-top: 1px solid var(--gray-bright);
+  padding-top: 60px;
+}
+
+.sec_signup .btn_area .inner {
+  text-align: center;
+}
+
+.sec_signup .btn_area .inner #join_btn {
+  margin-right: 5px;
+  background: var(--main-blue);
+}
+
+#chk {
+  display: block;
+}
+
+/* 회원 가입 완료 */
+.sec_joined.inner {
+  max-width: var(--member-width);
+  margin-top: 100px;
+  text-align: center;
+}
+
+.sec_joined .join_msg {
+  font-size: 35px;
+  font-weight: bold;
+  color: var(--main-black);
+  padding-left: 55px;
+  margin-top: 82px;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.sec_joined .join_msg::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: var(--gray-bright);
+  position: absolute;
+  top: -33px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sec_joined .join_msg::after {
+  content: "";
+  display: block;
+  width: 45px;
+  height: 40px;
+  background: url(../img/big_check.png) no-repeat;
+  position: absolute;
+  top: 7px;
+  left: 103px;
+}
+
+.sec_joined .btn_area .login_btn {
+  background: var(--main-blue);
+  margin-right: 5px;
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .sec_subtitle {
+    margin-top: 0;
+  }
+}
+
+/* Big Mobile */
+@media screen and (max-width: 767px) {
+  /* 회원 타입 선택 */
+  .sec_member_type.inner {
+    margin-top: 50px;
+  }
+
+  .sec_signup .title_area {
+    height: 145px;
+  }
+
+  .sec_member_type > div {
+    float: none;
+    width: 100%;
+  }
+
+  .kid_member {
+    margin-bottom: 20px;
+  }
+
+  /* 회원가입 */
+  .sec_signup .title_area {
+    padding-top: 50px;
+  }
+
+  .sec_signup .inner,
+  .input_form.inner,
+  .terms_form.inner {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: none;
+    width: 100%;
+  }
+
+  .input_form dl > * {
+    float: none;
+    width: 100%;
+  }
+
+  .input_form input[type="text"],
+  .input_form input[type="tel"],
+  .input_form input[type="password"] {
+    width: 100%;
+  }
+
+  .input_form dl > dd #email {
+    width: calc(100% - 102px);
+  }
+
+  .museum_news_list > li, .newsletter_list > li {
+    padding-bottom: 10px;
+  }
+
+  .sec_joined .join_msg {
+    padding-left: 0;
+    font-size: 26px;
+  }
+
+  .sec_joined .join_msg::after {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 375px) {
+  .sec_member_type > div > h3 {
+    padding-bottom: 50px;
+  }
+
+  .sec_signup .title_area h3 {
+    font-size: 30px;
+  }
+
+  .sec_signup .title_area span {
+    display: block;
+    padding-top: 20px;
+    padding-left: 0;
+  }
+
+  .input_form.inner {
+    padding-top: 30px;
+  }
+
+  .terms_form.inner {
+    padding: 30px 20px;
+  }
+
+  .terms_form .detail_chkbox {
+    width: auto;
+  }
+
+  .terms_form .view_detail {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100px;
+    margin-left: 32px;
+  }
+
+  .terms_form .view_detail::after {
+    top: 5px;
+  }
+
+  .marketing {
+    clear: both;
+  }
+
+  .museum_news_list > li {
+    width: 120px;
+  }
+
+  .btn_area button,
+  .btn_area a[type="button"] {
+    padding: 22px 30px;
+  }
+}

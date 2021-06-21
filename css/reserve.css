@@ -1,0 +1,389 @@
+@charset "UTF-8";
+
+@import url(reset.css);
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+
+.sec_reserve .inner {
+  padding: 0 20px;
+}
+
+.sec_reserve .inner > section {
+  margin-top: 60px;
+}
+
+.sec_reserve h4 {
+  font-size: 24px;
+}
+
+/* 예약 안내 */
+.reserve_info {
+  border: 1px solid var(--gray-bright);
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.reserve_info > p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.reserve_info_contents {
+  list-style-type: decimal;
+  padding-left: 30px;
+  line-height: 1.5;
+}
+
+.reserve_info_contents > li {
+  padding-top: 10px;
+}
+
+/* 관람 정보 선택 */
+.sec_exhibition_reserve h3 {
+  margin-bottom: 20px;
+}
+
+.calendar_area {
+  float: left;
+}
+
+.timetable_area {
+  float: left;
+  margin-left: 30px;
+  width: calc(100% - 302px);
+}
+
+.timetable {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+}
+
+.timetable > div {
+  clear: both;
+  border-bottom: 1px solid var(--gray-bright);
+  height: 35px;
+  line-height: 35px;
+}
+
+.timetable > div > div {
+  text-align: center;
+  float: left;
+  width: calc(100% / 5);
+}
+
+.timetable > div > div:nth-child(3) {
+  width: calc((100% / 5) * 2);
+}
+
+.timetable .timetable_title {
+  width: calc((100% - 40px) / 2);
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  margin-top: 20px;
+  background: var(--gray-dark);
+  color: var(--white);
+}
+
+.timetable button {
+  border: 1px solid var(--gray-bright);
+  padding: 5px 10px;
+  vertical-align: top;
+  margin-top: 3px;
+}
+
+.timetable button:hover,
+.timetable button.on {
+  color: var(--white);
+  background: var(--main-red);
+}
+
+.timetable_round div:first-child {
+  color: var(--main-blue);
+}
+
+/* 달력 */
+.ui-widget {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: var(--gray-dark);
+}
+.ui-widget-header {
+  border: none;
+  background: var(--white);
+}
+
+.ui-widget.ui-widget-content {
+  border: 1px solid var(--gray-bright);
+  border-radius: 0;
+}
+
+.ui-datepicker-calendar tr td {
+  padding-top: 10px;
+}
+
+.ui-datepicker td span, .ui-datepicker td a {
+  text-align: center;
+  padding-top: 9px;
+}
+
+.ui-datepicker-week-end:first-child {
+  color: var(--main-red);
+}
+
+.ui-datepicker-week-end:last-child {
+  color: var(--main-blue);
+}
+
+/* 이전 버튼 */
+.ui-icon-circle-triangle-w {
+  background-position: -96px -15px;
+}
+
+/* 다음 버튼 */
+.ui-icon-circle-triangle-e {
+  background-position: -32px -15px;
+}
+
+.ui-datepicker-prev:hover,
+.ui-datepicker-next:hover {
+  background: var(--white);
+}
+
+/* 기본 */
+.ui-widget-content .ui-state-default {
+  border: none;
+  background: var(--white);
+  height: 35px;
+}
+
+/* 오늘 날짜 */
+.ui-widget-content .ui-state-highlight {
+  color: var(--main-red);
+}
+
+/* 선택 날짜 */
+.ui-state-default.ui-state-active {
+  color: var(--white);
+  background: var(--main-red);
+  border-radius: 50%;
+}
+
+/* 예약 정보 입력 */
+.sec_reserve_form h3 {
+  display: inline-block;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.reserve_form_wrap > div {
+  float: left;
+  width: calc((100% - 20px) / 2);
+  padding: 10px 20px;
+  margin-right: 20px;
+  background: var(--gray-white);
+}
+
+.reserve_form_wrap > div:last-child {
+  margin-right: 0;
+}
+
+/* 관람 인원 */
+.guest_info .guest_no > li {
+  height: 50px;
+  line-height: 50px;
+}
+
+.guest_info .guest_no > li > span {
+  display: inline-block;
+  width: 120px;
+  padding-left: 10px;
+}
+
+.guest_info .guest_no input[type='number'] {
+  width: 50%;
+  height: 40px;
+}
+
+.reserve_form_wrap > div > h4 {
+  line-height: 50px;
+}
+
+/* 예약 안내 */
+.reserve_guide {
+  padding: 0 20px 20px 20px;
+}
+.reserve_guide > h4 {
+  padding-bottom: 10px;
+}
+
+/* 예약자 정보 */
+.subscriber {
+  margin-top: 10px;
+}
+
+.subscriber caption {
+  display: none;
+}
+
+.subscriber tr {
+  height: 50px;
+}
+
+.subscriber #email,
+.subscriber #name {
+  width: 99%;
+}
+
+.subscriber input {
+  width: calc((100% - 20px) / 3);
+}
+
+.subscriber select {
+  border: 1px solid var(--gray-bright);
+  width: calc((100% - 20px) / 3);
+  height: 40px;
+}
+
+.subscriber #mobile2 {
+  margin: 0 5px;
+}
+
+.subscriber th {
+  width: 30%;
+  text-align: left;
+}
+
+.subscriber td {
+  width: 70%;
+}
+
+.sec_reserve .btn_area {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.sec_reserve .btn_area > a:first-child {
+  margin-right: 5px;
+  background: var(--main-blue);
+}
+
+@media screen and (max-width: 1024px) {
+  .sec_subtitle {
+    margin-top: 0;
+  }
+
+  .sec_reserve .inner {
+    padding: 0 30px;
+  }
+
+  /* 관람 정보 선택 */
+  .timetable {
+    grid-template-columns: 1fr;
+    gap: 10px 0;
+  }
+
+  .timetable .timetable_title {
+    width: 100%;
+    grid-column-end: 2;
+    grid-row-end: 1;
+  }
+
+  /* 예약 정보 입력 */
+  .reserve_form_wrap > div {
+    float: none;
+    width: 100%;
+  }
+
+  .reserve_form_wrap > div:first-child {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sec_reserve .inner {
+    padding: 0 20px;
+  }
+
+  .subtitle h2 {
+    font-size: 29px;
+  }
+
+  .subtitle h2::before {
+    height: 29px;
+  }
+
+  /* 관람 정보 선택 */
+  .sec_exhibition_reserve > div {
+    float: none;
+  }
+
+  .timetable_area {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  /* 달력 */
+  .ui-datepicker {
+    width: auto;
+  }
+
+  .ui-datepicker-calendar tr td {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .ui-widget-content .ui-state-default {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .ui-datepicker td a {
+    padding-top: 0;
+    display: inline-block;
+  }
+
+  /* 예약 정보 입력 */
+  .sec_reserve_form h3{
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  .reserve_guide {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .subtitle .go_prev {
+    margin-right: 10px;
+  }
+
+  .subtitle h2 {
+    padding-left: 10px;
+  }
+
+  .sec_reserve_form > span {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .reserve_form_wrap > div {
+    padding: 10px;
+  }
+
+  .sec_reserve .btn_area {
+    margin-top: 60px;
+  }
+
+  /* 버튼 */
+  .btn_area a {
+    padding: 22px 13.33vw;
+  }
+}

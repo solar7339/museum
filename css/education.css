@@ -1,0 +1,165 @@
+/* Education */
+.sec_edu {
+  margin-top: 40px;
+  height: 311px;
+  background: url(../img/edu_bg.png) no-repeat;
+}
+
+.sec_edu .inner {
+  padding: 40px 20px 22px 20px;
+}
+
+.sec_edu .edu {
+  float: left;
+  width: calc(100% - 294px - 20px);
+  margin-right: 20px;
+  position: relative;
+}
+
+.sec_edu .edu h2 {
+  margin-bottom: 20px;
+  font-size: 35px;
+  font-weight: 700;
+  color: var(--main-black);
+}
+
+/* edu-swiper */
+.edu .swiper-slide {
+  background: var(--gray-bright);
+  height: 179px;
+}
+
+.edu .swiper-slide .edu_wrap div:first-child {
+  text-align: center;
+}
+
+.edu .swiper-slide .edu_wrap div:first-child::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.edu .swiper-slide .edu_wrap div:first-child > p {
+  height: 35px;
+  line-height: 35px;
+}
+
+.edu_state {
+  width: 79px;
+  color: var(--white);
+  font-weight: 500;
+  float: left;
+}
+
+.edu_state.blue {
+  background: var(--main-blue);
+}
+
+.edu_state.red {
+  background: var(--main-red);
+}
+
+.edu_state.gray {
+  background: var(--gray-dark);
+}
+
+.edu_dur {
+  border: 1px solid var(--gray-bright); 
+  width: calc(100% - 79px);
+  background: var(--white);
+  float: right;
+}
+
+.edu_detail {
+  border: 1px solid var(--gray-bright);
+  background: var(--white);
+  height: 144px;
+  padding: 20px;
+}
+
+.edu_detail > a {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.edu_detail > a:hover {
+  text-decoration: underline;
+}
+
+.edu_detail > div:nth-child(2) {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.edu_detail > div span:first-child {
+  width: 58px;
+  display: inline-block;
+}
+
+.edu_detail > div span:last-child {
+  width: 73%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+}
+
+.swiper-button-prev-edu {
+  top: 0;
+  right: 42px;
+}
+
+.swiper-button-next-edu {
+  top: 0;
+  right: 0px;
+}
+
+/* info_use */
+.sec_edu .info_use {
+  float: right;
+  width: 290px;
+}
+
+.sec_edu .info_use h2 {
+  font-size: 35px;
+  font-weight: 700;
+  color: var(--main-black);
+  margin-bottom: 20px;
+}
+
+.sec_edu .info_use .info_use_content {
+  line-height: 1.6;
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  /* Education */
+  .sec_edu {
+    margin-top: 60px;
+    height: auto;
+    background: none;
+  }
+
+  .sec_edu .inner {
+    padding: 0 30px;
+  }
+
+  .sec_edu .edu {
+    float: none;
+    width: 100%;
+  }
+
+  .sec_edu .info_use {
+    float: none;
+    display: none;
+  }
+}
+
+/* Big Mobile */
+@media screen and (max-width: 767px) {
+  /* Education */
+  .sec_edu .inner {
+    padding: 0 20px;
+  }
+}

@@ -1,0 +1,72 @@
+/* Exhibition */
+.sec_exhib {
+  margin-top: 60px;
+}
+
+.sec_exhib .inner {
+  padding: 0 20px;
+  position: relative;
+}
+
+.sec_exhib h2 {
+  margin-bottom: 20px;
+  font-size: 35px;
+  font-weight: 700;
+  color: var(--main-black);
+}
+
+/* exhib-swiper */
+.sec_exhib .swiper-slide > a {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.sec_exhib .swiper-slide > a img {
+  width: 100%;
+}
+
+.sec_exhib .over_content {
+  padding: 116px 20px;
+  color: var(--white);
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(30, 30, 30, .8), rgba(87, 87, 87, .8));
+  opacity: 0;
+}
+
+.sec_exhib .over_content > p {
+  text-align: center;
+}
+
+.sec_exhib .over_content > p.type {
+  font-size: 18px;
+  font-weight: 700;
+  padding-bottom: 17px;
+}
+
+.sec_exhib .over_content > strong {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.238;
+}
+
+.sec_exhib .over_content > p.date {
+  padding-top: 20px;
+  padding-bottom: 90px;
+}
+
+.swiper-button-prev-exhib {
+  top: 0;
+  right: 62px;
+}
+
+.swiper-button-next-exhib {
+  top: 0;
+  right: 20px;
+}

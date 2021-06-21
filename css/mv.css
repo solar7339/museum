@@ -1,0 +1,255 @@
+/* Main Visual */
+main {
+  margin-top: 102px;
+}
+
+main .swiper-slide {
+  width: 940px;
+  border-radius: 58px;
+  overflow: hidden;
+}
+
+main .swiper-slide a {
+  display: block;
+}
+
+main .swiper_controller {
+  width: 170px;
+  position: absolute;
+  left: 50%;
+  bottom: 39px;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+main .swiper_controller .play_pause_btn {
+  width: 40px;
+  background: rgba(0, 0, 0, .5);
+  border-radius: 20px;
+  float: left;
+}
+
+main .swiper_controller button {
+  text-indent: -9999px;
+  width: 40px;
+  height: 40px;
+}
+
+main .swiper_controller button.play_btn {
+  background: url(../img/play_btn.png) no-repeat center;
+}
+
+main .swiper_controller button.pause_btn {
+  background: url(../img/pause_btn.png) no-repeat center;
+}
+
+main .swiper-pagination {
+  color: rgba(255, 255, 255, .5);
+  width: 110px;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, .5);
+  line-height: 36px;
+  position: initial;
+  float: right;
+}
+
+main .swiper-pagination-current {
+  color: var(--white);
+}
+
+main .swiper-button-next {
+  color: var(--white);
+}
+
+main .swiper-button-prev {
+  margin-left: 60px;
+  color: var(--white);
+}
+
+main .swiper-button-next::after,
+main .swiper-button-prev::after {
+  font-size: 16px;
+}
+
+/* Info */
+.sec_info {
+  margin-top: 60px;
+  height: 73px;
+}
+
+.sec_info .inner {
+  border-top: 1px solid var(--gray-bright);
+  border-bottom: 1px solid var(--gray-bright);
+  line-height: 71px;
+  padding: 0 20px;
+  position: relative;
+}
+
+.sec_info .opening_hours li {
+  display: inline-block;
+}
+
+.sec_info .opening_hours .info_title {
+  width: 200px;
+  padding-left: 30px;
+  border-right: 1px solid var(--gray-bright);
+}
+
+.sec_info .opening_hours .info_title i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: sub;
+  background: url(../img/gray_clock.png) no-repeat;
+}
+
+.sec_info .opening_hours .info_time {
+  width: 539px;
+  font-weight: 500;
+}
+
+.sec_info .opening_hours .info_time > span:first-child {
+  padding-left: 20px;
+  padding-right: 13px;
+}
+
+.sec_info .info_icons {
+  font-weight: 500;
+  height: 73px;
+  line-height: 73px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+.sec_info .info_icons a:first-child {
+  margin-right: 30px;
+}
+
+.sec_info .info_icons .i_reservation {
+  display: inline-block;
+  width: 18px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: sub;
+  background: url(../img/gray_reservation.png) no-repeat;
+}
+
+.sec_info .info_icons .i_direction {
+  display: inline-block;
+  width: 14px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: sub;
+  background: url(../img/gray_directions.png) no-repeat;
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  /* Main Visual */
+  main {
+    margin-top: 0;
+  }
+
+  main .swiper-slide {
+    width: 94.1406vw;
+    border-radius: 0;
+  }
+
+  main .swiper-slide a img {
+    width: 100%;
+  }
+
+  main .swiper_controller {
+    width: 110px;
+    bottom: 22px;
+  }
+
+  main .swiper_controller .play_pause_btn {
+    float: initial;
+    margin: 10px auto;
+  }
+
+  main .swiper-button-next {
+    right: 3px;
+    top: 57px;
+    margin-top: 0;
+  }
+
+  main .swiper-button-prev {
+    left: 3px;
+    top: 57px;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  /* Info */
+  .sec_info {
+    margin-top: 40px;
+    border-top: 1px solid var(--gray-bright);
+    border-bottom: 1px solid var(--gray-bright);
+  }
+
+  .sec_info .inner {
+    padding: 0 30px;
+  }
+
+  .sec_info .opening_hours .info_title {
+    width: 170px;
+    padding-left: 0;
+  }
+
+  .sec_info .info_icons a .info_txt {
+    display: none;
+  }
+
+  .sec_info .info_icons .i_reservation {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  /* Info */
+  .sec_info .opening_hours .info_time {
+    width: 34.6666vw;
+  }
+
+  .sec_info .opening_hours .info_time span:last-child {
+    display: none;
+  }
+}
+
+/* Big Mobile */
+@media screen and (max-width: 767px) {
+  /* Info */
+  .sec_info {
+    margin-top: 30px;
+  }
+
+  .sec_info .inner {
+    padding: 0 20px;
+  }
+
+  .sec_info .opening_hours .info_time {
+    width: 40vw;
+  }
+
+  .sec_info .info_icons {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 375px) {
+  /* Info */
+  .sec_info .opening_hours {
+    font-size: 4.2666vw;
+  }
+
+  .sec_info .opening_hours .info_title {
+    width: 45.3333vw;
+  }
+}

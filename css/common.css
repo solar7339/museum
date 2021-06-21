@@ -1,0 +1,198 @@
+:root {
+  /* Color */
+  --white       : #ffffff;
+  --gray-white  : #f4f4f4;
+  --gray-bright : #dbdbdb;
+  --gray-medium : #9b9b9b;
+  --gray-dark   : #575757;
+  --main-black  : #1e1e1e;
+  --main-red    : #e4032e;
+  --main-blue   : #003764;
+
+  /* Size */
+  --max-width   : 1280px;
+  --t-menu-width: 682px;
+  --m-menu-width: 355px;
+  --member-width: 668px;
+}
+
+/* 공통 */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.visually-hidden {
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  z-index: -1;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px); /* for legacy browsers */
+  clip-path: inset(50%);
+}
+
+.text-hidden {
+  white-space: nowrap;
+  text-indent: 100%;
+  overflow: hidden;
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.dim {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--main-black);
+  opacity: 0.7;
+  z-index: 8;
+}
+
+.dim.popup {
+  z-index: 11;
+}
+
+h3 {
+  font-size: 35px;
+  font-weight: bold;
+  color: var(--main-black);
+}
+
+input[type="checkbox"] + label {
+  position: relative;
+  cursor: pointer;
+  line-height: 20px;
+  color: var(--main-black);
+  font-weight: 500;
+}
+
+input[type="checkbox"] + label:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid var(--gray-bright );
+  vertical-align: text-bottom;
+  margin-right: 10px;
+}
+
+/* content: "\2714"; 체크표시 유니코드 */
+/* input[type="checkbox"]:checked + label:before {
+  content: url(../img/check.png);
+  color: var(--main-blue);
+  border-color: var(--main-blue);
+} */
+
+input[type="checkbox"].on + label:before {
+  content: url(../img/check.png);
+  color: var(--main-blue);
+  border-color: var(--main-blue);
+}
+
+.btn_area button {
+  padding: 22px 50px;
+  font-size: 18px;
+  color: var(--white);
+  background: var(--main-blue);
+}
+
+.btn_area a {
+  padding: 22px 50px;
+  font-size: 18px;
+  color: var(--white);
+  background: var(--gray-medium);
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.working {
+  position: relative;
+}
+
+.working::before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 7px;
+  height: 7px;
+  background-color: var(--main-red);
+  border-radius: 50%;
+  top: -3px;
+  left: 50%;
+  animation: hop 0.5s ease-out alternate infinite;
+}
+
+@keyframes hop {
+  to {
+    top: -10px;
+  }
+}
+
+/* 서브페이지 subtitle */
+.sec_subtitle {
+  margin-top: 52px;
+  background: url(../img/member/member_title_bg.jpg) no-repeat center;
+}
+
+.sec_subtitle .inner {
+  padding: 0 20px;
+}
+
+.subtitle {
+  padding-top: 60px;
+}
+
+.subtitle .go_prev {
+  margin-right: 20px;
+}
+
+.subtitle .go_prev img {
+  vertical-align: baseline;
+}
+
+.subtitle h2 {
+  font-size: 42px;
+  font-weight: bold;
+  color: var(--main-black);
+  display: inline-block;
+  padding-left: 20px;
+  position: relative;
+}
+
+.subtitle h2::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 42px;
+  background: var(--gray-medium);
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+
+.location {
+  height: 60px;
+  line-height: 60px;
+  text-align: right;
+}
+
+.location a {
+  font-size: 14px;
+  color: var(--main-black);
+}
+
+.red {
+  color: var(--main-red);
+}
