@@ -59,6 +59,7 @@
 }
 
 .dim.popup {
+  display: block;
   z-index: 11;
 }
 

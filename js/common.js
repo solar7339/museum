@@ -4,19 +4,16 @@ if($(window).outerWidth() > 1024) {
   const idx = pathNm.lastIndexOf('/');
   const pathNmStr = pathNm.substring(idx);
 
-  console.log('pathNm:: ',pathNm, ', pathNmStr:: ', pathNmStr);
-
   if(pathNmStr === '/' || pathNmStr === '/index.html') {
     $('.layer_popup').show();
     $('.dim').addClass('popup');
-    $('.dim').show();
   }
 }
 
-$('#popup_close_btn').on('click', function() {
+$('#popup_close_btn').on('click', function(e) {
+  e.preventDefault();
   $('.layer_popup').hide();
   $('.dim').removeClass('popup');
-  $('.dim').hide();
 });
 
 
@@ -71,7 +68,9 @@ function displayDesktop() {
   $('.sub_menu').hide();
   $('.gnb_sec nav .gnb > li > a').removeClass('on');
   $('.m_language').hide();
-  $('.dim').hide();
+  if(!$('.dim').hasClass('popup')) {
+    $('.dim').hide();
+  }
 
   // search
   $('.search_box .search_field').attr('placeholder', '')
@@ -161,8 +160,8 @@ $('.menu_close_btn').on('click', function(e) {
 
 // - sub menu
 $('.gnb_sec nav .gnb > li > a').on('click', function(e) {
-  if('pc' === deviceType) return;
   e.preventDefault();
+  if('pc' === deviceType) return;
   $(this).siblings().slideToggle();
   $(this).toggleClass('on');
 });
