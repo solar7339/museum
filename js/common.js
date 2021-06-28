@@ -26,8 +26,8 @@ let deviceType = '';
 
 // Init
 if(checkDesktop.matches) {
-  handleDesktopChange(checkDesktop);
   showPopup();
+  handleDesktopChange(checkDesktop);
 } else {
   handleMobileChange(checkMobile);
 }
