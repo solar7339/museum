@@ -1,5 +1,5 @@
 // popup
-if($(window).outerWidth() > 1024) {
+function showPopup() {
   const pathNm = $(location).attr('pathname');
   const idx = pathNm.lastIndexOf('/');
   const pathNmStr = pathNm.substring(idx);
@@ -27,6 +27,7 @@ let deviceType = '';
 // Init
 if(checkDesktop.matches) {
   handleDesktopChange(checkDesktop);
+  showPopup();
 } else {
   handleMobileChange(checkMobile);
 }
